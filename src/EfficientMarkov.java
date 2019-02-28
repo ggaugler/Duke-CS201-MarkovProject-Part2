@@ -20,7 +20,8 @@ public class EfficientMarkov extends BaseMarkov
 	{
 		myMap.clear();
 		myText = text;
-		String markov, next;
+		String markov;
+		String next;
 		for (int k = 0; k < myText.length() + 1 - myOrder; k++)
 		{
 			markov = myText.substring(k, myOrder + k);
@@ -29,7 +30,10 @@ public class EfficientMarkov extends BaseMarkov
 			if(myText.length() < myOrder + k)
 				myMap.get(markov).add(PSEUDO_EOS);
 			else
+			{
 				next = myText.substring(myOrder + k, myOrder + k + 1);
+				myMap.get(markov).add(next);
+			}
 		}
 	}
 	@Override

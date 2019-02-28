@@ -25,7 +25,7 @@ public class EfficientWordMarkov extends BaseWordMarkov
 		String next;
 		for (int k = 0; k < myWords.length + 1 - myOrder; k++)
 		{
-			WordGram markov = new WordGram(myWords, k , myOrder);
+			WordGram markov = new WordGram(myWords, k, myOrder);
 			if(!myMap.containsKey(markov))
 				myMap.put(markov,  new ArrayList<String>());
 			if(myWords.length < myOrder + k)
@@ -35,7 +35,6 @@ public class EfficientWordMarkov extends BaseWordMarkov
 				next = myWords[myOrder + k];
 				myMap.get(markov).add(next);
 			}
-
 		}
 	}
 	@Override
