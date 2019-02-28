@@ -2,28 +2,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Random;
 
 public class EfficientWordMarkov extends BaseWordMarkov 
 {
-	
-	protected String[] myWords;
-	protected Random myRandom;
-	protected int myOrder;
-	protected static String PSEUDO_EOS = "";
-	protected static long RANDOM_SEED = 1234;
-	
 	private Map<WordGram,ArrayList<String>> myMap;
 	
-	EfficientWordMarkov()
-	{
-		this(2);
-		myMap = new HashMap<WordGram,ArrayList<String>>();
-	}
 	public EfficientWordMarkov(int order)
 	{
 		super(order);
 		myMap = new HashMap<WordGram, ArrayList<String>>();
+	}
+	public EfficientWordMarkov()
+	{
+		this(2);
+		myMap = new HashMap<WordGram,ArrayList<String>>();
 	}
 	@Override
 	public void setTraining(String text)

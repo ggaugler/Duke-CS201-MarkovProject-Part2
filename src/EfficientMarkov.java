@@ -2,14 +2,10 @@ import java.util.*;
 
 public class EfficientMarkov extends BaseMarkov 
 {
-	protected String myText;
-	protected Random myRandom;
-	protected int myOrder;
-	protected static String PSEUDO_EOS = "";
-	protected static long RANDOM_SEED = 1234;
+
 	private Map<String,ArrayList<String>> myMap;
 	
-	EfficientMarkov(int order)
+	public EfficientMarkov(int order)
 	{
 		super(order);
 		myMap = new HashMap<String, ArrayList<String>>();
