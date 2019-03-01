@@ -1,7 +1,6 @@
 This is the analysis for Markov Part 2, Spring 2019
 
-Include your name and net id here. Answer the questions from the assignment 
-that are reproduced below
+Geoff Gaugler gg102
 
 (1) Determine (from running Benchmark.java) how long it takes for 
 BaseMarkov to generate 2,000, 4,000, 8,000, 16,000, and 32,000 
